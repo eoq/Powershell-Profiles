@@ -3,10 +3,11 @@
 #local profile - should only be used to load global profile
 #
 #to install custom local profile on this computer:
-#create a new profile
-#	new-item -itemtype file -force $profile
-#replace current profile with one stored in azure
+#
+#	New-Item -itemtype file -force $profile
 #	Invoke-WebRequest https://edprivate.blob.core.windows.net/data/lprofile.ps1 -OutFile $profile
+# Unblock-File $profile
+#
 ###############################################################
 
 #kelly specific stuff
@@ -78,9 +79,3 @@ if($gprofile) {
 #### endif global profile not found
 #
 
-
-# Chocolatey profile
-$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
-if (Test-Path($ChocolateyProfile)) {
-  Import-Module "$ChocolateyProfile"
-}

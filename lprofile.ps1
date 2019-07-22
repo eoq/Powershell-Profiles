@@ -4,9 +4,8 @@
 #
 #to install custom local profile on this computer:
 #
-#	New-Item -itemtype file -force $profile
-#	Invoke-WebRequest https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/lprofile.ps1 -OutFile $profile
-# Unblock-File $profile
+#  New-Item -itemtype file -force $profile
+#  Invoke-WebRequest https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/lprofile.ps1 -OutFile $profile;Unblock-File $profile
 #
 ###############################################################
 

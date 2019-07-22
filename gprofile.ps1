@@ -1,7 +1,3 @@
-##############################################################################
-### This profile is downloaded by the actual local profile - 
-###	lprofile ($profile)
-###
 #create a new profile
 #new-item -itemtype file -force $profile
 #edit profile
@@ -114,6 +110,7 @@ function cdrdm {cd \\amer\dfs\winlin\wintel\Public\Scripts\rdm}
 function cddr {cd \\amdrwfs01\drdoc\ILNX\0dr_recovery_scripts}
 function head {$input | select-object -first 10}
 function mygal {cat $gfile | sls "^new-alias|^func"}
+function hs {Get-Content (Get-PSReadlineOption).HistorySavePath |sls $args}
 #function golab {select-azurermprofile c:\temp\azure_lab.txt}
 #function goprod {select-azurermprofile c:\temp\azure_prod.txt}
 

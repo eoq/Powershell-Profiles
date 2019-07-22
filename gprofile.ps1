@@ -1,5 +1,6 @@
 ##############################################################################
-### This profile is downloaded by the actual local profile - lprofile ($profile)
+### This profile is downloaded by the actual local profile - 
+###	lprofile ($profile)
 ###
 #create a new profile
 #new-item -itemtype file -force $profile

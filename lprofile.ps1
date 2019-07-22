@@ -25,15 +25,16 @@ if($env:userdnsdomain -match "kellyservices") {
 $tmpdir="$env:USERPROFILE\tmp"
 mkdir $tmpdir -ErrorAction SilentlyContinue
 $ProgressPreference = "silentlyContinue"  #stop the annoying progress bar from invoke-web...
-Invoke-WebRequest https://edprivate.blob.core.windows.net/data/gprofile.ps1 -OutFile $tmpdir/gprofile.ps1
+#Invoke-WebRequest https://edprivate.blob.core.windows.net/data/gprofile.ps1 -OutFile $tmpdir/gprofile.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/gprofile.ps1 -OutFile $tmpdir/gprofile.ps1
 if($?) {
-  write-host "... Downloaded gprofile from azure ..."
+  write-host "... Downloaded gprofile from github ..."
   if($AtKelly) {
     cp $tmpdir/gprofile.ps1 "\\hqw2fs01\quilleo$\gprofile.ps1"
   }
   cp $tmpdir/gprofile.ps1 $env:userprofile
 }else {
-  write-host "... NOT able to download gprofile from azure ..."
+  write-host "... NOT able to download gprofile from github ..."
 }
 $ProgressPreference = "Continue"  #reset back to default
 
@@ -61,12 +62,6 @@ if($gprofile) {
 #
 #
   new-alias grep findstr
-#grep as select-string doesn't process object lists as you would think: gal | select-string grep to see what i am saing
-#new-alias grep Select-String
-#alternate grep method
-#function grep {
-#  $input | out-string -stream | select-string $args
-#}
   new-alias less more
   new-alias df get-psdrive
   new-alias vim 'C:\Program Files (x86)\Vim\vim74\vim.exe'
@@ -79,3 +74,8 @@ if($gprofile) {
 #### endif global profile not found
 #
 
+# Chocolatey profile
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}

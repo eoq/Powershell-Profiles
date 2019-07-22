@@ -5,7 +5,7 @@
 #to install custom local profile on this computer:
 #
 #	New-Item -itemtype file -force $profile
-#	Invoke-WebRequest https://edprivate.blob.core.windows.net/data/lprofile.ps1 -OutFile $profile
+#	Invoke-WebRequest https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/lprofile.ps1 -OutFile $profile
 # Unblock-File $profile
 #
 ###############################################################

@@ -64,7 +64,10 @@ Function Get-FolderSizes
     }
 }
 
-##aliases
+###### key mappings (psreadline) ##########
+Set-PSReadLineKeyHandler -Chord Ctrl+d -Function DeleteChar
+
+###### aliases ############################ 
 #
 #
 

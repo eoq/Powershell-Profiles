@@ -65,7 +65,11 @@ Function Get-FolderSizes
 }
 
 ###### key mappings (psreadline) ##########
-Set-PSReadLineKeyHandler -Chord Ctrl+d -Function DeleteChar
+Set-PSReadLineOption -EditMode Emacs
+if(!$?) {
+  #probably < 5.0 so lets at least do this ...
+  Set-PSReadLineKeyHandler -Chord Ctrl+d -Function DeleteChar
+}
 
 ###### aliases ############################ 
 #

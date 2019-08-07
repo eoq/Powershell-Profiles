@@ -106,7 +106,6 @@ new-alias np notepad++
 new-alias npp notepad++
 new-alias code "$ENV:LOCALAPPDATA\Programs\Microsoft VS Code\Code.exe"
 new-alias which get-command
-new-alias as get-azcontext #azure
 new-alias ff Find-Files
 new-alias find Find-Files
 function ss {Get-AzSubscription | ogv -PassThru | Select-AzSubscription}  #azure
@@ -118,6 +117,7 @@ function cddr {cd \\amdrwfs01\drdoc\ILNX\0dr_recovery_scripts}
 function head {$input | select-object -first 10}
 function mygal {cat $gfile | sls "^new-alias|^func"}
 function hs {Get-Content (Get-PSReadlineOption).HistorySavePath |sls $args}
+function as {get-azcontext;get-azvm | measure | select count} #azure
 #function golab {select-azurermprofile c:\temp\azure_lab.txt}
 #function goprod {select-azurermprofile c:\temp\azure_prod.txt}
 

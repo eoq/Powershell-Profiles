@@ -25,6 +25,15 @@ $VIMPath="$LPath\gVimPortable\app\vim\vim74"
 $GVIMPath="$VIMPath\gvim.exe"
 $VIMPath="$VIMPath\vim.exe"
 
+function popup {
+param(
+  $msg="Remember!"
+)
+[void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic") 
+[Microsoft.VisualBasic.Interaction]::MsgBox($msg, "YesNoCancel,SystemModal,Information,DefaultButton2", "Success")
+[Microsoft.VisualBasic.Interaction]::MsgBox("Five Tries, You are almost Locked out, Try again", "OKOnly,SystemModal,Exclamation", "Lockout?")
+}
+
 function Check-VIMStatus {
   if (-not (test-path -path $GVIMPath)) {
     write-host "Portable vim is not installed. Run Install-VIM ..."

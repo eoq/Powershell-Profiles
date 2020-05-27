@@ -29,9 +29,8 @@ function popup {
 param(
   $msg="Remember!"
 )
-[void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic") 
-[Microsoft.VisualBasic.Interaction]::MsgBox($msg, "YesNoCancel,SystemModal,Information,DefaultButton2", "Success")
-[Microsoft.VisualBasic.Interaction]::MsgBox("Five Tries, You are almost Locked out, Try again", "OKOnly,SystemModal,Exclamation", "Lockout?")
+  [void] [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.VisualBasic") 
+  [Microsoft.VisualBasic.Interaction]::MsgBox($msg, "YesNoCancel,SystemModal,Information,DefaultButton2", "Success")
 }
 
 function Check-VIMStatus {

@@ -126,6 +126,7 @@ function fta {
   )
   $stuff | format-table -autosize
 }
+function wta {Start-Process wt -Verb runAs}
 new-alias wc measure
 new-alias less more
 new-alias df get-psdrive

@@ -137,7 +137,6 @@ new-alias lsltr ls-ltr
 new-alias notepad++ "C:\Program Files (x86)\Notepad++\notepad++.exe"
 new-alias np notepad++
 new-alias npp notepad++
-new-alias code "$ENV:LOCALAPPDATA\Programs\Microsoft VS Code\Code.exe"
 new-alias which get-command
 new-alias ff Find-Files
 new-alias find Find-Files

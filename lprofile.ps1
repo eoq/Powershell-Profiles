@@ -24,7 +24,6 @@ if($env:userdnsdomain -match "kellyservices") {
 $tmpdir="$env:USERPROFILE\tmp"
 mkdir $tmpdir -ErrorAction SilentlyContinue
 $ProgressPreference = "silentlyContinue"  #stop the annoying progress bar from invoke-web...
-#Invoke-WebRequest https://edprivate.blob.core.windows.net/data/gprofile.ps1 -OutFile $tmpdir/gprofile.ps1
 Invoke-WebRequest https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/gprofile.ps1 -OutFile $tmpdir/gprofile.ps1
 if($?) {
   write-host "... Downloaded gprofile from github ..."

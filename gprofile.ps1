@@ -5,7 +5,6 @@
 
 #load this with:
 #current master copy: https://raw.githubusercontent.com/eoq/Powershell-Profiles/master/gprofile.ps1
-#  iex(new-object net.webclient).downloadstring('https://edpublic.azurewebsites.net/files/gprofile.txt')
 #  iex(new-object net.webclient).downloadstring('http://sysadmweb.kelly.com/gprofile.txt')
 #
 # append the following line to $profile to make this profile load for all shells

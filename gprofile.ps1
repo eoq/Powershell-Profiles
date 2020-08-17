@@ -144,7 +144,7 @@ function vip {gvim $gsource}
 function ls-ltr {gci $args | sort LastWriteTime}
 function islocked {get-aduser $args[0] -properties * | select lockedout}
 function cdrdm {cd \\amer\dfs\winlin\wintel\Public\Scripts\rdm}
-function cddr {cd \\amdrwfs01\drdoc\ILNX\0dr_recovery_scripts}
+function cddr {cd \\amdrwfs01\drdoc\ILNX\0dr_recovery_scripts\new2019-v1}
 function head {$input | select-object -first 10}
 function mygal {cat $gfile | sls "^new-alias|^func"}
 function hs {Get-Content (Get-PSReadlineOption).HistorySavePath |sls $args}

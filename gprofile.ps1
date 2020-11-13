@@ -127,7 +127,7 @@ function fta {
 }
 function wta {Start-Process wt -Verb runAs}
 new-alias wc measure
-new-alias less more
+#new-alias less more
 new-alias df get-psdrive
 new-alias vim $VIMPath
 new-alias vi vim

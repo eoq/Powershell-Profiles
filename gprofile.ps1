@@ -224,7 +224,8 @@ $haveAdmin = $currentPrincipal.IsInRole( [Security.Principal.WindowsBuiltInRole]
 ""
 
 #change to google drive global if it exists
-$GGDIR=$HOME + "\Google Drive\global";if(test-path $ggdir) {cd $ggdir}
+# $GGDIR=$HOME + "\Google Drive\global";if(test-path $ggdir) {cd $ggdir}
+$GGDIR="E:\My Drive\global";if(test-path $ggdir) {cd $ggdir}
 
 #now lets add modules from ggdir if it exists
 if(test-path $ggdir\scripts\powershell\Modules) {

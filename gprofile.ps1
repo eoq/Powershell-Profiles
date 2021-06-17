@@ -232,11 +232,18 @@ if(test-path $ggdir\scripts\powershell\Modules) {
   $env:psmodulepath = $env:psmodulepath + ";$ggdir\scripts\powershell\Modules"
 }
 
+#kelly modules
+$ttt_epath="\\amer\dfs\winlin\Wintel\Public\Scripts\psmodules"
+if(test-path $ttt_epath) {
+  $env:PSModulePath = $env:PSModulePath + "$([System.IO.Path]::PathSeparator)$ttt_epath"
+}
+
 #restore the previous error action
 $ErrorActionPreference=$prevAction
 
 #cleanup variables we used in this profile
 Remove-Variable prevaction
+Remove-Variable ttt*
 
 Check-VIMStatus | Out-Null
 
